@@ -44,10 +44,11 @@ function download_system_install()
 	}
 	if($db->field_exists('did', 'threads'))
 	{
-		$db->drop_column('threads', 'did');
+		$db->write_query("ALTER TABLE ".TABLE_PREFIX."threads DROP did");
 	}
 	switch($db->type)
 	{
+		case "sqlite":
 		case "sqlite2":
 		case "sqlite3":
 			$db->write_query("CREATE TABLE ".TABLE_PREFIX."downloads (
@@ -67,7 +68,7 @@ function download_system_install()
 				own smallint NOT NULL default '0',
 				downloads int NOT NULL default '0'
 			);");
-			$db->add_column("threads", "did", "int NOT NULL default '0'");
+			$db->write_query("ALTER TABLE ".TABLE_PREFIX."threads ADD did int NOT NULL default '0'");
 			break;
 		case "pgsql":
 			$db->write_query("CREATE TABLE ".TABLE_PREFIX."downloads (
@@ -88,7 +89,7 @@ function download_system_install()
 				downloads int NOT NULL default '0',
 				PRIMARY KEY (did)
 			);");
-			$db->add_column("threads", "did", "int NOT NULL default '0'");
+			$db->write_query("ALTER TABLE ".TABLE_PREFIX."threads ADD did int NOT NULL default '0'");
 			break;
 		default:
 			$db->write_query("CREATE TABLE ".TABLE_PREFIX."downloads (
@@ -109,7 +110,7 @@ function download_system_install()
 				downloads int(10) unsigned NOT NULL default '0',
 				PRIMARY KEY (did)
 				) ENGINE=MyISAM;");
-				$db->add_column("threads", "did", "int unsigned NOT NULL default '0'");
+				$db->write_query("ALTER TABLE ".TABLE_PREFIX."threads ADD did int unsigned NOT NULL default '0'");
 	}
 
 	$array = array(
@@ -214,7 +215,7 @@ function download_system_install()
 function download_system_uninstall()
 {
 	global $db;
-	$db->drop_column('threads', 'did');
+	$db->write_query("ALTER TABLE ".TABLE_PREFIX."threads DROP did");
 	$db->drop_table('downloads');
 	$db->delete_query('templates', 'title=\'download_postbit\'');
 	$db->delete_query('templates', 'title=\'download_license\'');
