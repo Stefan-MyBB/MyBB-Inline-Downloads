@@ -1,11 +1,23 @@
 <?php
-/**************************************
- * Download-System for MyBB           *
- * Version: 1.0                       *
- * Copyright © 2006-2010 StefanT      *
- * All Rights Reserved                *
- * Website: http://www.mybbcoder.info *
- **************************************/
+ /**
+ * This file is part of Download-System for MyBB.
+ * Copyright (C) 2006-2011 StefanT (http://www.mybbcoder.info)
+ * https://github.com/Stefan-ST/MyBB-Inline-Downloads
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 
 // Disallow direct access to this file for security reasons
 if(!defined("IN_MYBB"))
