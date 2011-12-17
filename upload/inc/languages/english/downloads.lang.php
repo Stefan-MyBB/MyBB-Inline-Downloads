@@ -19,7 +19,7 @@
  *
  */
 
-$l['ds_title'] = 'Titel';
+$l['ds_title'] = 'Title';
 $l['ds_version'] = 'Version';
 $l['ds_dateline'] = 'Uploaded';
 $l['ds_downloads'] = 'Downloads';
