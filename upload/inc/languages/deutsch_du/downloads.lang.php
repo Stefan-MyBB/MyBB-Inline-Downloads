@@ -1,7 +1,7 @@
 <?php
  /**
  * This file is part of Download-System for MyBB.
- * Copyright (C) 2006-2011 StefanT (http://www.mybbcoder.info)
+ * Copyright (C) 2006-2012 StefanT (http://www.mybboard.de)
  * https://github.com/Stefan-ST/MyBB-Inline-Downloads
  *
  * This program is free software: you can redistribute it and/or modify
