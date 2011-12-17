@@ -169,7 +169,7 @@ function download_system_install()
 <td class="trow2">{$download[\'downloadbutton\']}</td>
 <td class="trow1">{$download[\'guestdl\']}</td>
 </tr>
-<tr><td colspan="3" class="trow2 smalltext">Download-System &copy; 2006-2010 <a href="http://www.mybbcoder.info">StefanT</a></td></tr>
+<tr><td colspan="3" class="trow2 smalltext">Download-System &copy; 2006-2012 <a href="http://www.mybboard.de">StefanT</a></td></tr>
 </table>'),
 		"sid" => "-1"
 		);
